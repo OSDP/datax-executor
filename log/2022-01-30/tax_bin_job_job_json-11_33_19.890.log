@@ -1,0 +1,26 @@
+2022-01-30 11:33:20.230 [main] ERROR Engine - 
+
+经DataX智能分析,该任务最可能的错误原因是:
+com.alibaba.datax.common.exception.DataXException: Code:[Framework-03], Description:[DataX引擎配置错误，该问题通常是由于DataX安装错误引起，请联系您的运维解决 .].  - 获取作业配置信息失败:/Users/caoguangqing/datax_package/datax_rd/datax/bin/job/job.json - java.io.FileNotFoundException: File '/Users/caoguangqing/datax_package/datax_rd/datax/bin/job/job.json' does not exist
+	at org.apache.commons.io.FileUtils.openInputStream(FileUtils.java:299)
+	at org.apache.commons.io.FileUtils.readFileToString(FileUtils.java:1711)
+	at org.apache.commons.io.FileUtils.readFileToString(FileUtils.java:1748)
+	at com.alibaba.datax.core.util.ConfigParser.getJobContent(ConfigParser.java:106)
+	at com.alibaba.datax.core.util.ConfigParser.parseJobConfig(ConfigParser.java:74)
+	at com.alibaba.datax.core.util.ConfigParser.parse(ConfigParser.java:26)
+	at com.alibaba.datax.core.Engine.entry(Engine.java:137)
+	at com.alibaba.datax.core.Engine.main(Engine.java:204)
+
+	at com.alibaba.datax.common.exception.DataXException.asDataXException(DataXException.java:33)
+	at com.alibaba.datax.core.util.ConfigParser.getJobContent(ConfigParser.java:108)
+	at com.alibaba.datax.core.util.ConfigParser.parseJobConfig(ConfigParser.java:74)
+	at com.alibaba.datax.core.util.ConfigParser.parse(ConfigParser.java:26)
+	at com.alibaba.datax.core.Engine.entry(Engine.java:137)
+	at com.alibaba.datax.core.Engine.main(Engine.java:204)
+Caused by: java.io.FileNotFoundException: File '/Users/caoguangqing/datax_package/datax_rd/datax/bin/job/job.json' does not exist
+	at org.apache.commons.io.FileUtils.openInputStream(FileUtils.java:299)
+	at org.apache.commons.io.FileUtils.readFileToString(FileUtils.java:1711)
+	at org.apache.commons.io.FileUtils.readFileToString(FileUtils.java:1748)
+	at com.alibaba.datax.core.util.ConfigParser.getJobContent(ConfigParser.java:106)
+	... 4 more
+

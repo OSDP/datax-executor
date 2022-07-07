@@ -1,0 +1,141 @@
+2022-03-08 17:11:53.611 [main] INFO  VMInfo - VMInfo# operatingSystem class => com.sun.management.internal.OperatingSystemImpl
+2022-03-08 17:11:53.631 [main] INFO  Engine - the machine info  => 
+
+	osInfo:	Oracle Corporation 11 11.0.12+8-LTS-237
+	jvmInfo:	Mac OS X x86_64 11.4
+	cpu num:	8
+
+	totalPhysicalMemory:	-0.00G
+	freePhysicalMemory:	-0.00G
+	maxFileDescriptorCount:	-1
+	currentOpenFileDescriptorCount:	-1
+
+	GC Names	[G1 Young Generation, G1 Old Generation]
+
+	MEMORY_NAME                    | allocation_size                | init_size                      
+	CodeHeap 'profiled nmethods'   | 117.21MB                       | 2.44MB                         
+	G1 Old Gen                     | 1,024.00MB                     | 970.00MB                       
+	G1 Survivor Space              | -0.00MB                        | 0.00MB                         
+	CodeHeap 'non-profiled nmethods' | 117.22MB                       | 2.44MB                         
+	Compressed Class Space         | 1,024.00MB                     | 0.00MB                         
+	Metaspace                      | -0.00MB                        | 0.00MB                         
+	G1 Eden Space                  | -0.00MB                        | 54.00MB                        
+	CodeHeap 'non-nmethods'        | 5.57MB                         | 2.44MB                         
+
+
+2022-03-08 17:11:53.658 [main] INFO  Engine - 
+{
+	"content":[
+		{
+			"reader":{
+				"name":"streamreader",
+				"parameter":{
+					"column":[
+						{
+							"type":"string",
+							"value":"DataX"
+						},
+						{
+							"type":"long",
+							"value":19890604
+						},
+						{
+							"type":"date",
+							"value":"1989-06-04 00:00:00"
+						},
+						{
+							"type":"bool",
+							"value":true
+						},
+						{
+							"type":"bytes",
+							"value":"test"
+						}
+					],
+					"sliceRecordCount":100000
+				}
+			},
+			"writer":{
+				"name":"streamwriter",
+				"parameter":{
+					"encoding":"UTF-8",
+					"print":false
+				}
+			}
+		}
+	],
+	"setting":{
+		"errorLimit":{
+			"percentage":0.02,
+			"record":0
+		},
+		"speed":{
+			"byte":10485760
+		}
+	}
+}
+
+2022-03-08 17:11:53.683 [main] WARN  Engine - prioriy set to 0, because NumberFormatException, the value is: null
+2022-03-08 17:11:53.685 [main] INFO  PerfTrace - PerfTrace traceId=job_-1, isEnable=false, priority=0
+2022-03-08 17:11:53.685 [main] INFO  JobContainer - DataX jobContainer starts job.
+2022-03-08 17:11:53.687 [main] INFO  JobContainer - Set jobId = 0
+2022-03-08 17:11:53.725 [job-0] INFO  JobContainer - jobContainer starts to do prepare ...
+2022-03-08 17:11:53.726 [job-0] INFO  JobContainer - DataX Reader.Job [streamreader] do prepare work .
+2022-03-08 17:11:53.726 [job-0] INFO  JobContainer - DataX Writer.Job [streamwriter] do prepare work .
+2022-03-08 17:11:53.727 [job-0] INFO  JobContainer - jobContainer starts to do split ...
+2022-03-08 17:11:53.727 [job-0] INFO  JobContainer - Job set Max-Byte-Speed to 10485760 bytes.
+2022-03-08 17:11:53.730 [job-0] INFO  JobContainer - DataX Reader.Job [streamreader] splits to [8] tasks.
+2022-03-08 17:11:53.733 [job-0] INFO  JobContainer - DataX Writer.Job [streamwriter] splits to [8] tasks.
+2022-03-08 17:11:53.769 [job-0] INFO  JobContainer - jobContainer starts to do schedule ...
+2022-03-08 17:11:53.802 [job-0] INFO  JobContainer - Scheduler starts [2] taskGroups.
+2022-03-08 17:11:53.804 [job-0] INFO  JobContainer - Running by standalone Mode.
+2022-03-08 17:11:53.903 [taskGroup-1] INFO  TaskGroupContainer - taskGroupId=[1] start [4] channels for [4] tasks.
+2022-03-08 17:11:53.903 [taskGroup-0] INFO  TaskGroupContainer - taskGroupId=[0] start [4] channels for [4] tasks.
+2022-03-08 17:11:53.932 [taskGroup-0] INFO  Channel - Channel set byte_speed_limit to 1231412.
+2022-03-08 17:11:53.934 [taskGroup-0] INFO  Channel - Channel set record_speed_limit to -1, No tps activated.
+2022-03-08 17:11:53.980 [taskGroup-0] INFO  TaskGroupContainer - taskGroup[0] taskId[6] attemptCount[1] is started
+2022-03-08 17:11:53.980 [taskGroup-1] INFO  TaskGroupContainer - taskGroup[1] taskId[4] attemptCount[1] is started
+2022-03-08 17:11:54.023 [taskGroup-0] INFO  TaskGroupContainer - taskGroup[0] taskId[0] attemptCount[1] is started
+2022-03-08 17:11:54.025 [taskGroup-1] INFO  TaskGroupContainer - taskGroup[1] taskId[2] attemptCount[1] is started
+2022-03-08 17:11:54.084 [taskGroup-1] INFO  TaskGroupContainer - taskGroup[1] taskId[7] attemptCount[1] is started
+2022-03-08 17:11:54.084 [taskGroup-0] INFO  TaskGroupContainer - taskGroup[0] taskId[5] attemptCount[1] is started
+2022-03-08 17:11:54.105 [taskGroup-1] INFO  TaskGroupContainer - taskGroup[1] taskId[3] attemptCount[1] is started
+2022-03-08 17:11:54.105 [taskGroup-0] INFO  TaskGroupContainer - taskGroup[0] taskId[1] attemptCount[1] is started
+2022-03-08 17:11:54.553 [taskGroup-1] INFO  TaskGroupContainer - taskGroup[1] taskId[4] is successed, used[579]ms
+2022-03-08 17:11:54.763 [taskGroup-0] INFO  TaskGroupContainer - taskGroup[0] taskId[1] is successed, used[658]ms
+2022-03-08 17:11:54.763 [taskGroup-0] INFO  TaskGroupContainer - taskGroup[0] taskId[6] is successed, used[788]ms
+2022-03-08 17:11:54.764 [taskGroup-1] INFO  TaskGroupContainer - taskGroup[1] taskId[2] is successed, used[739]ms
+2022-03-08 17:11:56.224 [taskGroup-1] INFO  TaskGroupContainer - taskGroup[1] taskId[7] is successed, used[2146]ms
+2022-03-08 17:11:56.324 [taskGroup-0] INFO  TaskGroupContainer - taskGroup[0] taskId[0] is successed, used[2303]ms
+2022-03-08 17:11:56.435 [taskGroup-0] INFO  TaskGroupContainer - taskGroup[0] taskId[5] is successed, used[2355]ms
+2022-03-08 17:11:56.446 [taskGroup-0] INFO  TaskGroupContainer - taskGroup[0] completed it's tasks.
+2022-03-08 17:11:56.539 [taskGroup-1] INFO  TaskGroupContainer - taskGroup[1] taskId[3] is successed, used[2436]ms
+2022-03-08 17:11:56.542 [taskGroup-1] INFO  TaskGroupContainer - taskGroup[1] completed it's tasks.
+2022-03-08 17:12:03.925 [job-0] INFO  StandAloneJobContainerCommunicator - Total 800000 records, 20800000 bytes | Speed 1.98MB/s, 80000 records/s | Error 0 records, 0 bytes |  All Task WaitWriterTime 0.622s |  All Task WaitReaderTime 7.373s | Percentage 100.00%
+2022-03-08 17:12:03.927 [job-0] INFO  AbstractScheduler - Scheduler accomplished all tasks.
+2022-03-08 17:12:03.931 [job-0] INFO  JobContainer - DataX Writer.Job [streamwriter] do post work.
+2022-03-08 17:12:03.932 [job-0] INFO  JobContainer - DataX Reader.Job [streamreader] do post work.
+2022-03-08 17:12:03.933 [job-0] INFO  JobContainer - DataX jobId [0] completed successfully.
+2022-03-08 17:12:03.936 [job-0] INFO  HookInvoker - No hook invoked, because base dir not exists or is a file: /Users/caoguangqing/datax_package/datax/datax/hook
+2022-03-08 17:12:03.950 [job-0] INFO  JobContainer - 
+	 [total cpu info] => 
+		averageCpu                     | maxDeltaCpu                    | minDeltaCpu                    
+		-1.00%                         | -1.00%                         | -1.00%
+                        
+
+	 [total gc info] => 
+		 NAME                 | totalGCCount       | maxDeltaGCCount    | minDeltaGCCount    | totalGCTime        | maxDeltaGCTime     | minDeltaGCTime     
+		 G1 Young Generation  | 1                  | 1                  | 1                  | 0.022s             | 0.022s             | 0.022s             
+		 G1 Old Generation    | 0                  | 0                  | 0                  | 0.000s             | 0.000s             | 0.000s             
+
+2022-03-08 17:12:03.951 [job-0] INFO  JobContainer - PerfTrace not enable!
+2022-03-08 17:12:03.952 [job-0] INFO  StandAloneJobContainerCommunicator - Total 800000 records, 20800000 bytes | Speed 1.98MB/s, 80000 records/s | Error 0 records, 0 bytes |  All Task WaitWriterTime 0.622s |  All Task WaitReaderTime 7.373s | Percentage 100.00%
+2022-03-08 17:12:03.958 [job-0] INFO  JobContainer - 
+任务启动时刻                    : 2022-03-08 17:11:53
+任务结束时刻                    : 2022-03-08 17:12:03
+任务总计耗时                    :                 10s
+任务平均流量                    :            1.98MB/s
+记录写入速度                    :          80000rec/s
+读出记录总数                    :              800000
+读写失败总数                    :                   0
+

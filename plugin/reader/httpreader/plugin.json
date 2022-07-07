@@ -1,0 +1,6 @@
+{
+  "name": "httpreader",
+  "class": "com.tuya.datax.plugin.reader.httpreader.HttpReader",
+  "description": "Retrive data from RESTful API",
+  "developer": "aochi"
+}
